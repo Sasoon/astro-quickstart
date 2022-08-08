@@ -1,0 +1,30 @@
+---
+import Head from '../components/Head.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import NetlifyCMS from '../components/NetlifyCMS.astro';
+
+---
+
+<html>
+  <Head />
+  <body class="container md:max-w-4xl lg:max-w-5xl mx-auto antialiased {{ page.title | downcase}}">
+    <Header />
+    <main class="main">
+      <div class="max-w-none px-4 sm:px-6 md:px-8">
+        <div class="lg:flex lg:flex-row-reverse lg:space-x-8 lg:space-x-reverse pb-16 mx-auto">
+          <slot />
+        </div>
+        <div class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:grid">
+          <!-- {% for painting in site.paintings limit:6 %}
+            {% include paintings-homepage.html %}
+          {% endfor %}    -->
+        </div>
+      </div>
+    </main>
+    <Footer />
+    <NetlifyCMS />
+  </body>
+  <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
+  <div id="snipcart" data-config-modal-style="side" data-api-key="MTlhNzQyYTQtOTUwNC00YmUyLWIxMjUtYTIxNDllNmU0MWY2NjM3NDUxNTc0NjM3NDM5MTQ2" hidden></div>  
+</html>
