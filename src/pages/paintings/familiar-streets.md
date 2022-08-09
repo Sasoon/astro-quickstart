@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/PaintingLayout.astro"
 order: 5
 title: Familiar Streets
 identifier: familiar-streets
@@ -7,15 +8,15 @@ price1: 120
 price2: 160
 price3: 190
 price4: 960
-price1-label: A4
-price2-label: A3
-price3-label: A2
-paper-frame1-label: White paper frame (currently unavailable)
-paper-frame2-label: Black paper frame (currently unavailable)
-thin-frame1-label: Thin white frame + white internal border
-thin-frame2-label: Thin black frame + white internal border
-thick-frame1-label: Thick white frame + white internal border
-thick-frame2-label: Thick black frame + white internal border
+price1_label: A4
+price2_label: A3
+price3_label: A2
+paper_frame1_label: White paper frame (currently unavailable)
+paper_frame2_label: Black paper frame (currently unavailable)
+thin_frame1_label: Thin white frame + white internal border
+thin_frame2_label: Thin black frame + white internal border
+thick_frame1_label: Thick white frame + white internal border
+thick_frame2_label: Thick black frame + white internal border
 image1: https://ucarecdn.com/228da032-41e4-4807-904a-493f7955a2a8/
 image2: https://ucarecdn.com/09f4766d-06d3-4a23-a635-b249c0af02d9/
 image3: https://ucarecdn.com/10ce3142-e9dc-41b4-bdc0-d2de6fbe5d96/

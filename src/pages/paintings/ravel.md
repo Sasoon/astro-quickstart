@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/PaintingLayout.astro"
 order: 10
 title: Ravel
 identifier: ravel
@@ -8,15 +9,15 @@ price1: 110
 price2: 147
 price3: 190
 price4: 960
-price1-label: A4
-price2-label: A3
-price3-label: A2
-paper-frame1-label: White paper frame (currently unavailable)
-paper-frame2-label: Black paper frame (currently unavailable)
-thin-frame1-label: Thin black frame + white internal border
-thin-frame2-label: Thin white frame + white internal border
-thick-frame1-label: Thick black frame + white internal border
-thick-frame2-label: Thick white frame + white internal border
+price1_label: A4
+price2_label: A3
+price3_label: A2
+paper_frame1_label: White paper frame (currently unavailable)
+paper_frame2_label: Black paper frame (currently unavailable)
+thin_frame1_label: Thin black frame + white internal border
+thin_frame2_label: Thin white frame + white internal border
+thick_frame1_label: Thick black frame + white internal border
+thick_frame2_label: Thick white frame + white internal border
 image1: https://ucarecdn.com/64484488-a145-476e-a47b-cff5fc358ff5/
 image2: https://ucarecdn.com/10f1dc69-cc81-4520-81ff-221bb673f985/
 image3: https://ucarecdn.com/4e7a2020-2ca9-49eb-9786-9dc31e82ff85/
