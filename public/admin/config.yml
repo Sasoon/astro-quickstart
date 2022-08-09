@@ -11,14 +11,14 @@ collections:
   - name: "paintings"
     create: true
     label: "Painting"
-    folder: "/src/pages/paintings"
+    folder: "src/pages/paintings"
     slug: "{{slug}}"
     fields:
       - {
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "/src/layouts/PaintingLayout.astro",
+          default: "src/layouts/PaintingLayout.astro",
         }
       - { label: "Order", name: "order", widget: "number" }
       - { label: "Title", name: "title", widget: "string" }
