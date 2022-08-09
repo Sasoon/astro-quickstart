@@ -22,7 +22,7 @@ const { title } = Astro.props;
     <slot />
   </div>
   <Footer />
-  <NetlifyCMS />
+  <NetlifyCMS client:load />
 </body>
 <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
 <div id="snipcart" data-config-modal-style="side"
