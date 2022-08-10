@@ -28,6 +28,7 @@ import Footer from '../components/Footer.astro';
         </div>
     </main>
     <Footer />
+    <!-- Netlify Identity -->
     <script lang="ts">
         if (window.netlifyIdentity) {
             window.netlifyIdentity.on("init", user => {
@@ -39,10 +40,12 @@ import Footer from '../components/Footer.astro';
             });
         }
     </script>
-
+    <!-- Snipcart  -->
+    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+    <div id="snipcart" data-config-modal-style="side"
+        data-api-key="MTlhNzQyYTQtOTUwNC00YmUyLWIxMjUtYTIxNDllNmU0MWY2NjM3NDUxNTc0NjM3NDM5MTQ2"
+        data-templates-url="/snipcart-templates.html" hidden></div>
 </body>
-<script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
-<div id="snipcart" data-config-modal-style="side"
-    data-api-key="MTlhNzQyYTQtOTUwNC00YmUyLWIxMjUtYTIxNDllNmU0MWY2NjM3NDUxNTc0NjM3NDM5MTQ2" hidden></div>
+
 
 </html>

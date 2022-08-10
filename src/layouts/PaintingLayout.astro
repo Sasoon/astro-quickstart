@@ -5,7 +5,7 @@ const { content } = Astro.props;
 let [frame1, frame2, frame3, frame4, frame5, frame6, sm, md, lg, price2] = [content.paper_frame1_label, content.paper_frame2_label, content.thin_frame1_label, content.thin_frame2_label, content.thick_frame1_label, content.thick_frame2_label, content.price1_label, content.price2_label, content.price3_label, content.price2]
 
 const smOptions = {
-  "data-item-custom1-options": `|${ frame1 }[+10]|${ frame2 }[+10]|${ frame3 }[+20]|${ frame4 }[+20]|${ frame5 }[+30]|${ frame6 }[+30]`
+  "data-item-custom1-options": `${ frame1 }[+10]|${ frame2 }[+10]|${ frame3 }[+20]|${ frame4 }[+20]|${ frame5 }[+30]|${ frame6 }[+30]`
 }
 
 const mdOptions = {
@@ -151,8 +151,7 @@ const lgOptions = {
           data-item-stackable="never" data-item-id={ content.identifier } data-item-name={ content.title }
           data-item-price={ content.price1 } data-item-image={ content.image }
           data-item-url={"https://staging.foursilverstrings.com.au" + content.url } data-item-description={
-          content.description } data-item-custom1-name="Frame" data-item-custom1-required="true"
-          data-item-custom1-value="null"
+          content.description } data-item-custom1-name="frame" data-item-custom1-required="true"
           {...smOptions}>
           Add to cart
           <span class="price">${ price2 }</span>
@@ -266,14 +265,12 @@ const lgOptions = {
     function frameHandler() {
       // get frame value
       var frame = $(".frame-selector:visible")[0].selectedOptions[0].value;
-      console.log('??' + frame);
       var framePrice = $(".frame-selector:visible")[0].selectedOptions[0].dataset
         .price;
-      console.log("frame!" + frame);
-      console.log(frame1);
-      console.log(framePrice);
+      console.log("frame: " + frame);
+      console.log('framePrice: ' + framePrice);
       // assign frame to buy button
-      $(".buy-button:visible").attr("data-item-custom1-value", "frame");
+      $(".buy-button:visible").attr("data-item-custom1-value", frame);
       // frame price modifier
       switch (frame) {
         case frame1:
