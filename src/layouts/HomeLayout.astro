@@ -5,7 +5,6 @@ import Head from '../components/Head.astro';
 import Nav from '../components/Nav.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import NetlifyCMS from '../components/NetlifyCMS.astro';
 
 ---
 
@@ -29,7 +28,18 @@ import NetlifyCMS from '../components/NetlifyCMS.astro';
         </div>
     </main>
     <Footer />
-    <NetlifyCMS client:load />
+    <script lang="ts">
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+
 </body>
 <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
 <div id="snipcart" data-config-modal-style="side"
