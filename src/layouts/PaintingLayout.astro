@@ -5,15 +5,15 @@ const { content } = Astro.props;
 let [frame1, frame2, frame3, frame4, frame5, frame6, sm, md, lg, price2] = [content.paper_frame1_label, content.paper_frame2_label, content.thin_frame1_label, content.thin_frame2_label, content.thick_frame1_label, content.thick_frame2_label, content.price1_label, content.price2_label, content.price3_label, content.price2]
 
 const smOptions = {
-  "data-item-custom1-options": `${ frame1 }[+10]|${ frame2 }[+10]|${ frame3 }[+20]|${ frame4 }[+20]|${ frame5 }[+30]|${ frame6 }[+30]`
+  "data-item-custom1-options": `${ frame3 }[+20]|${ frame4 }[+20]|${ frame5 }[+30]|${ frame6 }[+30]`
 }
 
 const mdOptions = {
-  "data-item-custom1-options": `|${ frame1 }[+20]|${ frame2 }[+20]|${ frame3 }[+30]|${ frame4 }[+30]|${ frame5 }[+40]|${ frame6 }[+40]`
+  "data-item-custom1-options": `${ frame3 }[+30]|${ frame4 }[+30]|${ frame5 }[+40]|${ frame6 }[+40]`
 }
 
 const lgOptions = {
-  "data-item-custom1-options": `|${ frame1 }[+30]|${ frame2 } [+30]|${ frame3 }[+40]|${ frame4 }[+40]|${ frame5 }[+50]|${ frame6 }[+50]`
+  "data-item-custom1-options": `${ frame3 }[+40]|${ frame4 }[+40]|${ frame5 }[+50]|${ frame6 }[+50]`
 }
 ---
 <DefaultLayout title={content.title}>
@@ -72,13 +72,13 @@ const lgOptions = {
           <div class="frame-container w-5/6 mr-1">
             <!-- Small frame -->
             <select class="frame-selector sm required" required>
-              <option value="" selected disabled hidden>Choose a frame</option>
-              <option disabled data-price="10" value={ frame1 }>
+              <!-- <option value="" selected disabled hidden>Choose a frame</option> -->
+              <!-- <option disabled data-price="10" value={ frame1 }>
                 { frame1 }: +$10
               </option>
               <option disabled data-price="10" value={ frame2 }>
                 { frame2 }: +$10
-              </option>
+              </option> -->
               <option data-price="20" value={ frame3 }>
                 { frame3 }: +$20
               </option>
@@ -94,13 +94,13 @@ const lgOptions = {
             </select>
             <!-- Medium frame -->
             <select class="frame-selector md required">
-              <option value="" selected disabled hidden>Choose a frame</option>
-              <option disabled data-price="20" value={ frame1 }>
+              <!-- <option value="" selected disabled hidden>Choose a frame</option> -->
+              <!-- <option disabled data-price="20" value={ frame1 }>
                 { frame1 }: +$20
               </option>
               <option disabled data-price="20" value={ frame2 }>
                 { frame2 }: +$20
-              </option>
+              </option> -->
               <option data-price="30" value={ frame3 }>
                 { frame3 }: +$30
               </option>
@@ -116,14 +116,13 @@ const lgOptions = {
             </select>
             <!-- Large frame -->
             <select class="frame-selector lg required">
-              1
-              <option value="" selected disabled hidden>Choose a frame</option>
-              <option disabled data-price="30" value={ frame1 }>
+              <!-- <option value="" selected disabled hidden>Choose a frame</option> -->
+              <!-- <option disabled data-price="30" value={ frame1 }>
                 { frame1 }: +$30
               </option>
               <option disabled data-price="30" value={ frame2 }>
                 { frame2 }: +$30
-              </option>
+              </option> -->
               <option data-price="40" value={ frame3 }>
                 { frame3 }: +$40
               </option>
@@ -151,7 +150,7 @@ const lgOptions = {
           data-item-stackable="never" data-item-id={ content.identifier } data-item-name={ content.title }
           data-item-price={ content.price1 } data-item-image={ content.image }
           data-item-url={"https://staging.foursilverstrings.com.au" + content.url } data-item-description={
-          content.description } data-item-custom1-name="frame" data-item-custom1-required="true"
+          content.description } data-item-custom1-name="frame"
           {...smOptions}>
           Add to cart
           <span class="price">${ price2 }</span>
@@ -271,6 +270,7 @@ const lgOptions = {
       console.log('framePrice: ' + framePrice);
       // assign frame to buy button
       $(".buy-button:visible").attr("data-item-custom1-value", frame);
+      console.log('value is frame = ' + frame);
       // frame price modifier
       switch (frame) {
         case frame1:
