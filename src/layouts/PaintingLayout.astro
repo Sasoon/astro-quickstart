@@ -2,7 +2,20 @@
 import DefaultLayout from "./DefaultLayout.astro";
 const { content } = Astro.props;
 
-let [frame1, frame2, frame3, frame4, frame5, frame6, sm, md, lg, price2] = [
+let [
+  frame1,
+  frame2,
+  frame3,
+  frame4,
+  frame5,
+  frame6,
+  sm,
+  md,
+  lg,
+  price1,
+  price2,
+  price3,
+] = [
   content.paper_frame1_label,
   content.paper_frame2_label,
   content.thin_frame1_label,
@@ -12,7 +25,9 @@ let [frame1, frame2, frame3, frame4, frame5, frame6, sm, md, lg, price2] = [
   content.price1_label,
   content.price2_label,
   content.price3_label,
+  content.price1,
   content.price2,
+  content.price3,
 ];
 
 const smOptions = {
@@ -203,14 +218,14 @@ const lgOptions = {
           data-item-stackable="never"
           data-item-id={content.identifier}
           data-item-name={content.title}
-          data-item-price={content.price1}
+          data-item-price={price1}
           data-item-image={content.image}
           data-item-description={content.description}
           data-item-custom1-name="Frame"
           {...smOptions}
         >
           Add to cart
-          <span class="price">${price2}</span>
+          <span class="price">${price1}</span>
         </button>
 
         <!-- Medium buy button -->
@@ -238,7 +253,7 @@ const lgOptions = {
           data-item-stackable="never"
           data-item-id={content.identifier}
           data-item-name={content.title}
-          data-item-price={content.price3}
+          data-item-price={price3}
           data-item-image={content.image}
           data-item-description={content.description}
           data-item-custom1-name="Frame"
@@ -246,7 +261,7 @@ const lgOptions = {
           {...lgOptions}
         >
           Add to cart
-          <span class="price">${price2}</span>
+          <span class="price">${price3}</span>
         </button>
       </form>
     </div>
