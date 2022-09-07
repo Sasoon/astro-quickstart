@@ -8,7 +8,6 @@ description: "2016. Acrylic on acid-free linen paper. Accompanied by the music
 price1: 120
 price2: 150
 price3: 190
-price4: 960
 price1_label: A4
 price2_label: A3
 price3_label: A2

@@ -8,7 +8,6 @@ description: 2014. Acrylic and gouache on watercolour paper. Accompanied by the
 price1: 110
 price2: 147
 price3: 190
-price4: 960
 price1_label: A4
 price2_label: A3
 price3_label: A2

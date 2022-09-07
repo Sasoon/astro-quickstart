@@ -355,31 +355,9 @@ const lgOptions = {
       $(".buy-button:visible").attr("data-item-custom1-value", frame);
       console.log("value is frame = " + frame);
       // frame price modifier
-      switch (frame) {
-        case frame1:
-        case frame2:
-          price =
-            parseInt($(".buy-button:visible").data("item-price")) +
-            parseInt(framePrice);
-          console.log("sm");
-          console.log(price);
-          break;
-        case frame3:
-        case frame4:
-          price =
-            parseInt($(".buy-button:visible").data("item-price")) +
-            parseInt(framePrice);
-          console.log("md");
-          break;
-        case frame5:
-        case frame6:
-          price =
-            parseInt($(".buy-button:visible").data("item-price")) +
-            parseInt(framePrice);
-          console.log("lg");
-          break;
-        default:
-      }
+      price =
+        parseInt($(".buy-button:visible").data("item-price")) +
+        parseInt(framePrice);
     }
 
     // run price calc on load

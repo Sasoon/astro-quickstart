@@ -8,7 +8,6 @@ description: "2018. Acrylic on acid-free water colour paper. Accompanied by
 price1: 120
 price2: 160
 price3: 190
-price4: 960
 price1_label: A4
 price2_label: A3
 price3_label: A2

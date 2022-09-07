@@ -27,7 +27,6 @@ collections:
       - { label: "Price1", name: "price1", widget: "number" }
       - { label: "Price2", name: "price2", widget: "number" }
       - { label: "Price3", name: "price3", widget: "number" }
-      - { label: "Price4", name: "price4", widget: "number" }
       - { label: "Price1 Label", name: "price1_label", widget: "string" }
       - { label: "Price2 Label", name: "price2_label", widget: "string" }
       - { label: "Price3 Label", name: "price3_label", widget: "string" }

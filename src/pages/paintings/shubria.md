@@ -8,7 +8,6 @@ description: 2016. Acrylic on acid-free canvas paper. Accompanied by Norayr
 price1: 130
 price2: 160
 price3: 190
-price4: 980
 price1_label: A4
 price2_label: A3
 price3_label: A2

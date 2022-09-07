@@ -7,7 +7,6 @@ description: 2014. Acrylic on watercolour paper. Accompanied by Ara Dinkjian.
 price1: 120
 price2: 160
 price3: 190
-price4: 960
 price1_label: A4
 price2_label: A3
 price3_label: A2

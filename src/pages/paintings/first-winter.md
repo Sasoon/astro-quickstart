@@ -8,7 +8,6 @@ description: 2017. Acrylic on paper. Accompanied by Pyotr Tchaikovsky's first
 price1: 130
 price2: 160
 price3: 190
-price4: 960
 price1_label: A4
 price2_label: A3
 price3_label: A2

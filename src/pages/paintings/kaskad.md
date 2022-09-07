@@ -7,7 +7,6 @@ description: "2013. Acrylic on watercolour paper. Accompanied by The Element Ban
 price1: 110
 price2: 150
 price3: 190
-price4: 960
 price1_label: A4
 price2_label: A3
 price3_label: A2
