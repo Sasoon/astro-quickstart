@@ -38,3 +38,7 @@
 .fotorama > div {
   @apply m-auto lg:m-0 px-4 sm:px-6 md:px-8;
 }
+
+.snipcart-button-primary {
+  background: hsl(220, 70%, 22%);
+}

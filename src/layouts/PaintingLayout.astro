@@ -1,51 +1,99 @@
 ---
-import DefaultLayout from './DefaultLayout.astro';
+import DefaultLayout from "./DefaultLayout.astro";
 const { content } = Astro.props;
 
-let [frame1, frame2, frame3, frame4, frame5, frame6, sm, md, lg, price2] = [content.paper_frame1_label, content.paper_frame2_label, content.thin_frame1_label, content.thin_frame2_label, content.thick_frame1_label, content.thick_frame2_label, content.price1_label, content.price2_label, content.price3_label, content.price2]
+let [frame1, frame2, frame3, frame4, frame5, frame6, sm, md, lg, price2] = [
+  content.paper_frame1_label,
+  content.paper_frame2_label,
+  content.thin_frame1_label,
+  content.thin_frame2_label,
+  content.thick_frame1_label,
+  content.thick_frame2_label,
+  content.price1_label,
+  content.price2_label,
+  content.price3_label,
+  content.price2,
+];
 
 const smOptions = {
-  "data-item-custom1-options": `${ frame3 }[+20]|${ frame4 }[+20]|${ frame5 }[+30]|${ frame6 }[+30]`
-}
+  "data-item-custom1-options": `${frame3}[+20]|${frame4}[+20]|${frame5}[+30]|${frame6}[+30]`,
+};
 
 const mdOptions = {
-  "data-item-custom1-options": `${ frame3 }[+30]|${ frame4 }[+30]|${ frame5 }[+40]|${ frame6 }[+40]`
-}
+  "data-item-custom1-options": `${frame3}[+30]|${frame4}[+30]|${frame5}[+40]|${frame6}[+40]`,
+};
 
 const lgOptions = {
-  "data-item-custom1-options": `${ frame3 }[+40]|${ frame4 }[+40]|${ frame5 }[+50]|${ frame6 }[+50]`
-}
+  "data-item-custom1-options": `${frame3}[+40]|${frame4}[+40]|${frame5}[+50]|${frame6}[+50]`,
+};
 ---
+
 <DefaultLayout title={content.title}>
   <!-- This is the individual painting page config -->
-  <div class="painting-container pt-12 lg:flex lg:flex-row lg:space-x-8 pb-16 mx-auto">
+  <div
+    class="painting-container lg:flex lg:flex-row lg:space-x-8 pb-16 mx-auto"
+  >
     <div class="painting-detail-image flex-1">
-      <div class="fotorama not-prose" data-nav="thumbs" data-allowfullscreen="false" data-fit="cover" data-keyboard="true"
-        data-loop="true" data-transition="crossfade" data-ratio="600/800">
-        <img src={content.image1 + '-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/' } alt={content.title
-          + 'painting image' } />
-        <img src={content.image2 + '-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/' } alt={content.title
-          + 'painting image' } />
-        <img src={content.image3 + '-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/' } alt={content.title
-          + 'painting image' } />
-        <img src={content.image4 + '-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/' } alt={content.title
-          + 'painting image' } />
-        <img src={content.image5 + '-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/' } alt={content.title
-          + 'painting image' } />
-        <img src={content.image6 + '-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/' } alt={content.title
-          + 'painting image' } />
-        <img src={content.image7 + '-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/' } alt={content.title
-          + 'painting image' } />
-        <img src={content.image8 + '-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/' } alt={content.title
-          + 'painting image' } />
+      <div
+        class="fotorama not-prose"
+        data-nav="thumbs"
+        data-allowfullscreen="false"
+        data-fit="cover"
+        data-keyboard="true"
+        data-loop="true"
+        data-transition="crossfade"
+        data-ratio="600/800"
+      >
+        <img
+          src={content.image1 +
+            "-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/"}
+          alt={content.title + "painting image"}
+        />
+        <img
+          src={content.image2 +
+            "-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/"}
+          alt={content.title + "painting image"}
+        />
+        <img
+          src={content.image3 +
+            "-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/"}
+          alt={content.title + "painting image"}
+        />
+        <img
+          src={content.image4 +
+            "-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/"}
+          alt={content.title + "painting image"}
+        />
+        <img
+          src={content.image5 +
+            "-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/"}
+          alt={content.title + "painting image"}
+        />
+        <img
+          src={content.image6 +
+            "-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/"}
+          alt={content.title + "painting image"}
+        />
+        <img
+          src={content.image7 +
+            "-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/"}
+          alt={content.title + "painting image"}
+        />
+        <img
+          src={content.image8 +
+            "-/resize/420x/-/quality/lightest/-/format/webp/-/progressive/yes/"}
+          alt={content.title + "painting image"}
+        />
       </div>
     </div>
     <!------------------------->
     <!-- Painting Definition -->
     <!------------------------->
 
-    <div class="flex-2 painting-detail px-4 sm:px-6 md:px-8 pb-6 font-muli">
-      <div class="text-container mb-4">
+    <div
+      class="flex-2 painting-detail px-4 pt-6 sm:px-6 md:px-8 lg:pt-0 pb-6 font-muli"
+    >
+      <div class="text-container mb-4 text-center lg:text-left">
         <span class="description">{content.description}</span>
         <p>
           <i class="fa fa-info-circle" aria-hidden="true"></i> For more information
@@ -58,9 +106,9 @@ const lgOptions = {
       <form>
         <div class="size-container flex mb-4">
           <select id="size" class="size-selector">
-            <option value="sm">{ sm }</option>
-            <option selected value="md">{ md }</option>
-            <option value="lg">{ lg }</option>
+            <option value="sm">{sm}</option>
+            <option selected value="md">{md}</option>
+            <option value="lg">{lg}</option>
           </select>
         </div>
 
@@ -76,17 +124,17 @@ const lgOptions = {
               <option disabled data-price="10" value={ frame2 }>
                 { frame2 }: +$10
               </option> -->
-              <option data-price="20" value={ frame3 }>
-                { frame3 }: +$20
+              <option data-price="20" value={frame3}>
+                {frame3}: +$20
               </option>
-              <option data-price="20" value={ frame4 }>
-                { frame4 }: +$20
+              <option data-price="20" value={frame4}>
+                {frame4}: +$20
               </option>
-              <option data-price="30" value={ frame5 }>
-                { frame5 }: +$30
+              <option data-price="30" value={frame5}>
+                {frame5}: +$30
               </option>
-              <option data-price="30" value={ frame6 }>
-                { frame6 }: +$30
+              <option data-price="30" value={frame6}>
+                {frame6}: +$30
               </option>
             </select>
             <!-- Medium frame -->
@@ -98,17 +146,17 @@ const lgOptions = {
               <option disabled data-price="20" value={ frame2 }>
                 { frame2 }: +$20
               </option> -->
-              <option data-price="30" value={ frame3 }>
-                { frame3 }: +$30
+              <option data-price="30" value={frame3}>
+                {frame3}: +$30
               </option>
-              <option data-price="30" value={ frame4 }>
-                { frame4 }: +$30
+              <option data-price="30" value={frame4}>
+                {frame4}: +$30
               </option>
-              <option data-price="40" value={ frame5 }>
-                { frame5 }: +$40
+              <option data-price="40" value={frame5}>
+                {frame5}: +$40
               </option>
-              <option data-price="40" value={ frame6 }>
-                { frame6 }: +$40
+              <option data-price="40" value={frame6}>
+                {frame6}: +$40
               </option>
             </select>
             <!-- Large frame -->
@@ -120,104 +168,133 @@ const lgOptions = {
               <option disabled data-price="30" value={ frame2 }>
                 { frame2 }: +$30
               </option> -->
-              <option data-price="40" value={ frame3 }>
-                { frame3 }: +$40
+              <option data-price="40" value={frame3}>
+                {frame3}: +$40
               </option>
-              <option data-price="40" value={ frame4 }>
-                { frame4 }: +$40
+              <option data-price="40" value={frame4}>
+                {frame4}: +$40
               </option>
-              <option data-price="50" value={ frame5 }>
-                { frame5 }: +$50
+              <option data-price="50" value={frame5}>
+                {frame5}: +$50
               </option>
-              <option data-price="50" value={ frame6 }>
-                { frame6 }: +$50
+              <option data-price="50" value={frame6}>
+                {frame6}: +$50
               </option>
             </select>
           </div>
           <!-- Quantity -->
           <div class="quantity-container w-1/6">
-            <label for={ content.identifier  + "-qty"} hidden>Quantity:</label>
-            <input type="number" id={ content.identifier  + "-qty"}
-              class="qty bg-accent-grey p-2 w-full rounded-sm cursor-pointer;" min="1" value="1" />
+            <label for={content.identifier + "-qty"} hidden>Quantity:</label>
+            <input
+              type="number"
+              id={content.identifier + "-qty"}
+              class="qty bg-accent-grey p-2 w-full rounded-sm cursor-pointer;"
+              min="1"
+              value="1"
+            />
           </div>
         </div>
 
         <!-- Small buy button -->
-        <button type="submit" class="buy-button buy-button--small snipcart-add-item" data-item-quantity="1"
-          data-item-stackable="never" data-item-id={ content.identifier } data-item-name={ content.title }
-          data-item-price={ content.price1 } data-item-image={ content.image }
-          data-item-url={"https://staging.foursilverstrings.com.au" + content.url } data-item-description={
-          content.description } data-item-custom1-name="frame"
-          {...smOptions}>
+        <button
+          type="submit"
+          class="buy-button buy-button--small snipcart-add-item"
+          data-item-quantity="1"
+          data-item-stackable="never"
+          data-item-id={content.identifier}
+          data-item-name={content.title}
+          data-item-price={content.price1}
+          data-item-image={content.image}
+          data-item-url={"https://staging.foursilverstrings.com.au" +
+            content.url}
+          data-item-description={content.description}
+          data-item-custom1-name="Frame"
+          {...smOptions}
+        >
           Add to cart
-          <span class="price">${ price2 }</span>
+          <span class="price">${price2}</span>
         </button>
 
-
-
         <!-- Medium buy button -->
-        <button class="buy-button buy-button--medium snipcart-add-item" data-item-quantity="1"
-          data-item-stackable="never" data-item-id={ content.identifier } data-item-name={ content.title }
-          data-item-price={ price2 } data-item-image={ content.image }
-          data-item-url={"https://staging.foursilverstrings.com.au" + content.url } data-item-description={
-          content.description } data-item-custom1-name="Frame" data-item-custom1-required="true"
-          {...mdOptions}>
+        <button
+          class="buy-button buy-button--medium snipcart-add-item"
+          data-item-quantity="1"
+          data-item-stackable="never"
+          data-item-id={content.identifier}
+          data-item-name={content.title}
+          data-item-price={price2}
+          data-item-image={content.image}
+          data-item-url={"https://staging.foursilverstrings.com.au" +
+            content.url}
+          data-item-description={content.description}
+          data-item-custom1-name="Frame"
+          data-item-custom1-required="true"
+          {...mdOptions}
+        >
           Add to cart
-          <span class="price">${ price2 }</span>
+          <span class="price">${price2}</span>
         </button>
 
         <!-- Large buy button -->
-        <button class="buy-button buy-button--large snipcart-add-item" data-item-quantity="1"
-          data-item-stackable="never" data-item-id={ content.identifier } data-item-name={ content.title }
-          data-item-price={ content.price3 } data-item-image={ content.image }
-          data-item-url={"https://staging.foursilverstrings.com.au" + content.url } data-item-description={
-          content.description } data-item-custom1-name="Frame" data-item-custom1-required="true"
-          {...lgOptions}>
+        <button
+          class="buy-button buy-button--large snipcart-add-item"
+          data-item-quantity="1"
+          data-item-stackable="never"
+          data-item-id={content.identifier}
+          data-item-name={content.title}
+          data-item-price={content.price3}
+          data-item-image={content.image}
+          data-item-url={"https://staging.foursilverstrings.com.au" +
+            content.url}
+          data-item-description={content.description}
+          data-item-custom1-name="Frame"
+          data-item-custom1-required="true"
+          {...lgOptions}
+        >
           Add to cart
-          <span class="price">${ price2 }</span>
+          <span class="price">${price2}</span>
         </button>
       </form>
     </div>
   </div>
 
-  
-  <script define:vars={{ frame1, frame2, frame3, frame4, frame5, frame6 }}>   
+  <script define:vars={{ frame1, frame2, frame3, frame4, frame5, frame6 }}>
     // Cart JS
     // buttons
     var sm = $(".buy-button--small");
     var md = $(".buy-button--medium");
     var lg = $(".buy-button--large");
     var btn = $(".buy-button");
-  
+
     // frame selectors
     var smFrame = $(".frame-selector.sm");
     var mdFrame = $(".frame-selector.md");
     var lgFrame = $(".frame-selector.lg");
     var frameSelector = $(".frame-selector");
-  
+
     // default to medium size
     btn.hide();
     frameSelector.hide();
     md.show();
     mdFrame.show();
-  
+
     // default pricing (medium + paper frame)
     var priceText = $(".price");
     console.log(priceText);
     var price = parseInt($(".buy-button:visible").data("item-price"));
-  
+
     // price calculator
     function priceCalc() {
       sizeHandler();
       frameHandler();
       priceText.text("$" + parseInt($(".qty").val()) * price);
     }
-  
+
     // global handler
     $("select").on("change", function () {
       priceCalc();
     });
-  
+
     $(".qty").change(function () {
       var qty = parseInt($(".qty").val());
       console.log(qty);
@@ -225,7 +302,7 @@ const lgOptions = {
       priceText.text("$" + qty * price);
       console.log("price from qty: " + price);
     });
-  
+
     // size handler
     function sizeHandler() {
       // get size value
@@ -256,18 +333,18 @@ const lgOptions = {
       btn.attr("data-item-quantity", 1);
       $(".qty").val(1);
     }
-  
+
     // frame handler
     function frameHandler() {
       // get frame value
       var frame = $(".frame-selector:visible")[0].selectedOptions[0].value;
-      var framePrice = $(".frame-selector:visible")[0].selectedOptions[0].dataset
-        .price;
+      var framePrice = $(".frame-selector:visible")[0].selectedOptions[0]
+        .dataset.price;
       console.log("frame: " + frame);
-      console.log('framePrice: ' + framePrice);
+      console.log("framePrice: " + framePrice);
       // assign frame to buy button
       $(".buy-button:visible").attr("data-item-custom1-value", frame);
-      console.log('value is frame = ' + frame);
+      console.log("value is frame = " + frame);
       // frame price modifier
       switch (frame) {
         case frame1:
@@ -295,64 +372,61 @@ const lgOptions = {
         default:
       }
     }
-  
+
     // run price calc on load
     priceCalc();
 
-
-    
     //////////
     // Main.JS
     //////////
 
-      function ReplaceSelectWithButtons(selectField) {
-    // get the basics
-    var selectValue = selectField.val();
-    var selectId = selectField.attr("id");
+    function ReplaceSelectWithButtons(selectField) {
+      // get the basics
+      var selectValue = selectField.val();
+      var selectId = selectField.attr("id");
 
-    // get all options and create buttons
-    $(selectField)
-      .find("option")
-      .each(function () {
-        if ($(this).val()) {
-          var btn = $(
-            '<div data-value="' +
-              $(this).val() +
-              '" data-target="' +
-              selectId +
-              '" class="selectbtn">' +
-              '<span>' +
-              $(this).text() +
-              '</span>' +
-              "</div>"
-          );
-          if ($(this).val() == selectValue) {
-            btn.addClass("selected");
+      // get all options and create buttons
+      $(selectField)
+        .find("option")
+        .each(function () {
+          if ($(this).val()) {
+            var btn = $(
+              '<div data-value="' +
+                $(this).val() +
+                '" data-target="' +
+                selectId +
+                '" class="selectbtn">' +
+                "<span>" +
+                $(this).text() +
+                "</span>" +
+                "</div>"
+            );
+            if ($(this).val() == selectValue) {
+              btn.addClass("selected");
+            }
+            btn.insertBefore(selectField);
           }
-          btn.insertBefore(selectField);
-        }
+        });
+      // hide the select field
+      selectField.hide();
+
+      // map click event to buttons
+      $(document).on("click", ".selectbtn", function () {
+        var target = $(this).data("target");
+        $('.selectbtn[data-target="' + target + '"]').removeClass("selected");
+        $(this).addClass("selected");
+
+        // deselect everything, select the selected :)
+        var selectorAll = "#" + target + " option";
+        $(selectorAll).removeAttr("selected");
+        var selectorSingle =
+          "#" + target + ' option[value="' + $(this).data("value") + '"]';
+        $(selectorSingle).attr("selected", "selected");
+        $(selectorSingle).change();
       });
-    // hide the select field
-    selectField.hide();
+    }
 
-    // map click event to buttons
-    $(document).on("click", ".selectbtn", function () {
-      var target = $(this).data("target");
-      $('.selectbtn[data-target="' + target + '"]').removeClass("selected");
-      $(this).addClass("selected");
-
-      // deselect everything, select the selected :)
-      var selectorAll = "#" + target + " option";
-      $(selectorAll).removeAttr("selected");
-      var selectorSingle =
-        "#" + target + ' option[value="' + $(this).data("value") + '"]';
-      $(selectorSingle).attr("selected", "selected");
-      $(selectorSingle).change();
-    });
-  }
-
-  // change size select  to button
-  ReplaceSelectWithButtons($("#size"));
-
+    // change size select  to button
+    ReplaceSelectWithButtons($("#size"));
   </script>
 </DefaultLayout>

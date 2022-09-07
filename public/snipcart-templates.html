@@ -6,7 +6,7 @@
   <cart-summary-item>
     <li class="snipcart-cart-summary-item">
       <span class="snipcart-cart-summary-item__name snipcart__font--slim">
-        {{ item.name }} HELLO
+        Painting: {{ item.name }}
       </span>
 
       <span class="snipcart-cart-summary-item__quantity snipcart__font--slim">
@@ -17,8 +17,6 @@
         {{ item.totalPrice | money(currency) }}
       </span>
       <div v-if="item.customFields && item.customFields.length > 0">
-        <strong>Custom fields</strong>
-        <strong>12312312312312312</strong>
         <span v-for="(customField, index) in item.customFields" :key="index">
           {{ customField.name }}: {{ customField.value }}
         </span>

@@ -1,47 +1,55 @@
 ---
-import '../style/base.css'
+import "../style/base.css";
 
-import Head from '../components/Head.astro';
-import Nav from '../components/Nav.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Head from "../components/Head.astro";
+import Nav from "../components/Nav.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 const { title } = Astro.props;
-
 ---
 
 <!DOCTYPE html>
 <html lang="en">
+  <Head />
 
-<Head />
+  <body
+    class={"container md:max-w-4xl lg:max-w-5xl mx-auto antialiased " + title}
+  >
+    <Nav />
+    <Header title={title} />
+    <div
+      class="px-4 sm:px-6 md:px-8 font-muli prose-sm lg:prose-md xl:prose-lg"
+    >
+      <slot />
+    </div>
+    <Footer />
+    <!-- Netlify Identity -->
+    <script lang="ts">
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    <!-- Snipcart  -->
+    <script
+      async
+      src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"
+    >
 
-<body class={"container md:max-w-4xl lg:max-w-5xl mx-auto antialiased " + title}>
-  <Nav />
-  <Header title={title} />
-  <div class=" px-4 sm:px-6 md:px-8 font-muli prose-sm lg:prose-md xl:prose-lg">
-  <slot />
-  </div>
-  <Footer />
-  <!-- Netlify Identity -->
-  <script lang="ts">
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
-  <!-- Snipcart  -->
-  <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
-  <div id="snipcart" data-config-modal-style="side"
-    data-api-key="MTlhNzQyYTQtOTUwNC00YmUyLWIxMjUtYTIxNDllNmU0MWY2NjM3NDUxNTc0NjM3NDM5MTQ2"
-    data-templates-url="/snipcart-templates.html" hidden>
-
-  </div>
-
-</body>
-
+    </script>
+    <div
+      id="snipcart"
+      data-config-modal-style="side"
+      data-api-key="MTlhNzQyYTQtOTUwNC00YmUyLWIxMjUtYTIxNDllNmU0MWY2NjM3NDUxNTc0NjM3NDM5MTQ2"
+      data-templates-url="/snipcart-templates.html"
+      hidden
+    >
+    </div>
+  </body>
 </html>

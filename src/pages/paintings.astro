@@ -15,10 +15,8 @@ const allPaintings = await Astro.glob('../pages/paintings/*.md');
 
 <DefaultLayout title="Paintings">
 
-    <p class="text-center mx-auto pb-12 max-w">
-        I show only the best websites and portfolios built completely with
-        passion, simplicity & creativity!
-    </p>
+    <p class="text-center mx-auto pb-6 max-w pt-0 mt-0">
+Add colour and character to your home with framed quality art prints. Contact us for any custom enquires.    </p>
     <!-- Generates painting listing page  -->
     <div class="painting-listing-container md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-12 md:grid">
         {allPaintings.map(p => (
