@@ -36,9 +36,9 @@
   >
 
   </script>
-  <script>
-    let button = document.querySelector("#menu-button"), // Hamburger Icon
-      menu = document.querySelector("#menu"); // Menu
+  <script is:inline>
+    const button = document.querySelector("#menu-button"); // Hamburger Icon
+    const menu = document.querySelector("#menu"); // Menu
 
     button.addEventListener("click", () => {
       menu.classList.toggle("hidden");
