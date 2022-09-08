@@ -289,7 +289,6 @@ const lgOptions = {
 
     // default pricing (medium + paper frame)
     var priceText = $(".price");
-    console.log(priceText);
     var price = parseInt($(".buy-button:visible").data("item-price"));
 
     // price calculator
@@ -306,10 +305,8 @@ const lgOptions = {
 
     $(".qty").change(function () {
       var qty = parseInt($(".qty").val());
-      console.log(qty);
       $(".buy-button:visible").attr("data-item-quantity", qty);
       priceText.text("$" + qty * price);
-      console.log("price from qty: " + price);
     });
 
     // size handler
@@ -349,11 +346,8 @@ const lgOptions = {
       var frame = $(".frame-selector:visible")[0].selectedOptions[0].value;
       var framePrice = $(".frame-selector:visible")[0].selectedOptions[0]
         .dataset.price;
-      console.log("frame: " + frame);
-      console.log("framePrice: " + framePrice);
       // assign frame to buy button
       $(".buy-button:visible").attr("data-item-custom1-value", frame);
-      console.log("value is frame = " + frame);
       // frame price modifier
       price =
         parseInt($(".buy-button:visible").data("item-price")) +
