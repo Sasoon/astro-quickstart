@@ -9,4 +9,5 @@ export default defineConfig({
       config: { applyBaseStyles: false, path: "./tailwind.config.cjs" },
     }),
   ],
+  site: "https://www.foursilverstrings.com.au",
 });
