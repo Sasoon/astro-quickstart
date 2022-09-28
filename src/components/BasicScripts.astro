@@ -4,9 +4,9 @@
 <!-- Snipcart  -->
 <script>
   async function getSnipcartAPI() {
-    return fetch(`/.netlify/functions/snipcart`)
-      .then((res) => res.json())
-      .then((data) => data.api);
+    return fetch(`/.netlify/functions/snipcart`).then((res) =>
+      console.log(res)
+    );
   }
 
   const publicApiKey = await getSnipcartAPI();
